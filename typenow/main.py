@@ -76,10 +76,20 @@ def type_test(lesson_str: str):
                 typed_char = getch().replace("\r", "\n")
 
                 match typed_char:
-                    case "":
+                    case "":  # ^C
                         exit(0)
-                    case "\x7f":
+                    case "\x7f":  # Backspace
                         continue
+                    case "\x10":  # ^P (Pause)
+                        pause_start_time = time()
+
+                        print(
+                            "Paused.\n\nPress any key to resume"
+                            + ((term_heigth - 4) * "\n")
+                        )
+                        getch()
+
+                        start_time -= pause_start_time - time()
 
                 if typed_char == char:
                     break
