@@ -31,7 +31,7 @@ def get_results(lesson_str: str, mistakes: int, start_time: float, char_nr: int)
         "Time taken": time_taken_str,
         "Gross WPM": int(gross_wpm),
         "Accuracy": f"{accuracy:.2f}% ({mistakes} mistakes [bold]/[/bold] {char_nr} chars)",
-        "Progress": f"{(char_nr / len(lesson_str) * 100):.2f}% ({char_nr}/{len(lesson_str)} chars)",
+        "Progress": f"{(char_nr / len(lesson_str) * 100):.2f}% ({char_nr}/{total_chars} chars)",
     }
 
     for key, value in stats.items():
