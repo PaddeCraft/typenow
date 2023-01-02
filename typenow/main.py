@@ -81,9 +81,9 @@ def type_test(lesson_str: str):
                 if typed_char == char:
                     break
 
-                print("Should be", ord(char))
-                print("Is", ord(typed_char))
-                input()
+                # print("Should be", ord(char))
+                # print("Is", ord(typed_char))
+                # input()
                 is_mistake = True
                 mistakes += 1
 
