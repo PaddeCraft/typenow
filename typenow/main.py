@@ -20,14 +20,17 @@ def get_results(lesson_str: str, mistakes: int, start_time: float, char_nr: int)
         gross_wpm = (char_nr / 5) / (time_taken / 60)
     except ZeroDivisionError:
         gross_wpm = 0
-    accuracy = ((total_chars - mistakes) / total_chars) * 100
+    try:
+        accuracy = ((char_nr - mistakes) / char_nr) * 100
+    except ZeroDivisionError:
+        accuracy = 0
 
     res = []
 
     stats = {
         "Time taken": time_taken_str,
         "Gross WPM": int(gross_wpm),
-        "Accuracy": f"{accuracy:.2f}% ({mistakes} mistakes [bold]/[/bold] {total_chars} chars)",
+        "Accuracy": f"{accuracy:.2f}% ({mistakes} mistakes [bold]/[/bold] {char_nr} chars)",
         "Progress": f"{(char_nr / len(lesson_str) * 100):.2f}% ({char_nr}/{len(lesson_str)} chars)",
     }
 
