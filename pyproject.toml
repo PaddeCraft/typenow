@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "typenow"
+version = "0.1.0"
+description = ""
+authors = ["PaddeCraft <70023807+PaddeCraft@users.noreply.github.com>"]
+
+[tool.poetry.scripts]
+typenow = "typenow.main:main"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+rich = "^13.0.0"
+py-getch = "^1.0.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = "^22.12.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
