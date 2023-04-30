@@ -5,8 +5,8 @@ Typenow is a simple terminal-based typing practice program.
 ## Installation
 
 Just run the command 
- - `pipx install git+https://github.com/PaddeCraft/typenow` to isntall with pipx
- - `pip install git+https://github.com/PaddeCraft/typenow` to isntall with pip
+ - `pipx install git+https://github.com/PaddeCraft/typenow` to install with pipx
+ - `pip install git+https://github.com/PaddeCraft/typenow` to install with pip
 ## Usage
 
 The program is started using the command `typenow <file>`, where `file` is a valid text file.
